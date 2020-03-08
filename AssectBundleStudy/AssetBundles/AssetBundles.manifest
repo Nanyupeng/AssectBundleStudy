@@ -1,0 +1,15 @@
+ManifestFileVersion: 0
+CRC: 2000732537
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: capsulewall.nan
+      Dependencies:
+        Dependency_0: share.nan
+    Info_1:
+      Name: cubewall.nan
+      Dependencies:
+        Dependency_0: share.nan
+    Info_2:
+      Name: share.nan
+      Dependencies: {}

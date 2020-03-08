@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 4210005926
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fe9ebbf3eb5349531b874ef1fb67d4e4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 43917c7e82ed3ae0a408b3ea37ec80f7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/CubeWall.prefab
+Dependencies:
+- F:/NanProject/AssectBundleStudy/AssectBundleStudy/AssectBundleStudy/AssetBundles/share.nan

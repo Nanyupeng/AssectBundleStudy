@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 262289419
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a7c73f065481380bb4b5e178af9da708
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b3ba791bb7d378b5189369ad535d14a7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefabs/CapsuleWall.prefab
+Dependencies:
+- F:/NanProject/AssectBundleStudy/AssectBundleStudy/AssectBundleStudy/AssetBundles/share.nan
