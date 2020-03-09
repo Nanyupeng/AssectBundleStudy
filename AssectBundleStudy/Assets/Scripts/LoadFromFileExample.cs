@@ -48,26 +48,27 @@ public class LoadFromFileExample : MonoBehaviour
 
     IEnumerator UnityWebRequests()
     {
-        
+
         //第四种Assetbundle加载方式 UnityWebRequest
         UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle("http://127.0.0.1/" + path);
         yield return request.SendWebRequest();
-        //byte[] bytes = request.downloadHandler.data;
-        //Debug.Log(request.downloadHandler.data);
-        //File.WriteAllBytes(Application.dataPath + "/Prefabs/", bytes);
+        AssetBundle ab = DownloadHandlerAssetBundle.GetContent(request);
+        GameObject go = ab.LoadAsset<GameObject>("Cubewall");
+        Instantiate(go);
 
-
-        //FileStream fs = new FileStream("Prefabs", FileMode.Append, FileAccess.ReadWrite);
-        //BinaryWriter bw = new BinaryWriter(fs);
-        //fs.Write(bytes, 0, bytes.Length);
-        //fs.Flush();     //流会缓冲，此行代码指示流不要缓冲数据，立即写入到文件。
-        //fs.Close();     //关闭流并释放所有资源，同时将缓冲区的没有写入的数据，写入然后再关闭。
-        //fs.Dispose();   //释放流
-        //request.Dispose();
-
-
-        //AssetBundle ab = DownloadHandlerAssetBundle.GetContent(request);
-        //GameObject go = ab.LoadAsset<GameObject>("Cubewall");
-        //Instantiate(go);
+        UnityWebRequest webRequest = UnityWebRequestAssetBundle.GetAssetBundle("http://127.0.0.1/" + " AssetBundles/AssetBundles");
+        yield return webRequest.SendWebRequest();
+        AssetBundle assetBundle = DownloadHandlerAssetBundle.GetContent(webRequest);
+        AssetBundleManifest bundleManifest = assetBundle.LoadAsset<AssetBundleManifest>("AssetBundleManifest");
+        //foreach (var item in bundleManifest.GetAllAssetBundles())
+        //{
+        //    Debug.Log(item);
+        //}
+        string[] alldepend = bundleManifest.GetAllDependencies("cubewall.nan");
+        foreach (var item in alldepend)
+        {
+            Debug.Log(item);
+            AssetBundle.LoadFromFile("AssetBundles/" + item);
+        }
     }
 }
